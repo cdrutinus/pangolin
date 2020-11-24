@@ -158,7 +158,10 @@ def predict_df(start_date_str: str, end_date_str: str, path_to_ips_file: str, ve
 
         # Create geo_pred_df with pred column
         geo_pred_df = ips_gdf[ID_COLS].copy()
-        geo_pred_df['PredictedDailyNewCases'] = geo_preds
+        if geo_preds == []:
+            continue
+        else :
+            geo_pred_df['PredictedDailyNewCases'] = geo_preds
         geo_pred_dfs.append(geo_pred_df)
 
     # Combine all predictions into a single dataframe
