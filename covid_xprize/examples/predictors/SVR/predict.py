@@ -28,7 +28,7 @@ NPI_COLS = ['C1_School closing',
             'H2_Testing policy',
             'H3_Contact tracing',
             'H6_Facial Coverings']
-NB_LOOKBACK_DAYS = 30
+NB_LOOKBACK_DAYS = 20
 # For testing, restrict training data to that before a hypothetical predictor submission date
 HYPOTHETICAL_SUBMISSION_DATE = np.datetime64("2020-07-31")
 
